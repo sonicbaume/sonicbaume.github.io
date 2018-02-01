@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+<body>
+<header>
+<h1>{{ page.title }}</h1>
+</header>
+<section>
+  <div class="cd-timeline-img cd-picture">
+    <img src="{{ "/assets/svg/open-book-1.svg" | relative_url }}" alt="Journal papers" width="60" height="60">
+  </div>
+</section>
+<section id="cd-timeline" class="cd-container">
+{% assign items = site.items | sort: 'date' %}
+{% for item in items reversed %}
+<div class="cd-timeline-block">
+<div class="cd-timeline-img cd-picture">
+<img src="
+{% case item.type %}
+{% when 'journal' %}
+{{ "/assets/svg/open-book-1.svg" | relative_url }}
+{% when 'conference' %}
+{{ "/assets/svg/open-book.svg" | relative_url }}
+{% when 'white' %}
+{{ "/assets/svg/notes.svg" | relative_url }}
+{% when 'presentation' %}
+{{ "/assets/svg/lecture-2.svg" | relative_url }}
+{% when 'press' %}
+{{ "/assets/svg/news.svg" | relative_url }}
+{% when 'media' %}
+{{ "/assets/svg/radio-1.svg" | relative_url }}
+{% when 'education' %}
+{{ "/assets/svg/mortarboard.svg" | relative_url }}
+{% when 'job' %}
+{{ "/assets/svg/suitcase.svg" | relative_url }}
+{% when 'volunteer' %}
+{{ "/assets/svg/teamwork-1.svg" | relative_url }}
+{% when 'award' %}
+{{ "/assets/svg/cup.svg" | relative_url }}
+{% endcase %}
+" alt="{{ item.type }}">
+</div>
+<div class="cd-timeline-content">
+<h2>{% case item.type %}
+{% when 'journal' %}
+Journal paper
+{% when 'conference' %}
+Conference paper
+{% when 'white' %}
+White paper
+{% when 'press' %}
+Press article
+{% when 'media' %}
+Media appearance
+{% when 'presentation' %}
+Presentation
+{% when 'job' %}
+{{ item.title }}
+{% when 'education' %}
+{{ item.award }}
+{% when 'volunteer' %}
+{{ item.title }}
+{% when 'award' %}
+{{ item.title }}
+{% endcase %}</h2>
+<p>
+{% case item.type %}
+{% when 'journal' %}
+{{ item.authors }}. "{{ item.title }}". In <i>{{ item.journal }}</i>. {% if item.inpress %}(in press){% endif %}
+{% when 'conference' %}
+{{ item.authors }}. "{{ item.title }}". In <i>Proceedings of {{ item.conference }}</i>.
+{% when 'white' %}
+{{ item.authors }}. "{{ item.title }}". {{ item.publisher }}.
+{% when 'award' %}
+{{ item.content }}
+{% when 'job' %}
+{{ item.employer }}, {{ item.date | date: "%B %Y" }} - {% if item.enddate %}{{ item.enddate | date: "%B %Y" }}{% else %}present{% endif %}.
+{% when 'volunteer' %}
+{{ item.organisation }}, {{ item.date | date: "%B %Y" }} - {% if item.enddate %}{{ item.enddate | date: "%B %Y" }}{%
+else %}present{% endif %}.<br />{{ item.content }}
+{% when 'education' %}
+{% if item.degree %}{{ item.degree }}, {% endif %}{{ item.institution }}, {{ item.startdate | date: "%B %Y" }} - {{ item.date | date: "%B %Y" }}
+{% when 'presentation' %}
+{{ item.event }}. {{ item.location }}.
+  {% assign d = item.date | date: "%-d"  %}
+  {% case d %}
+  {% when '1' or '21' or '31' %}{{ d }}st
+  {% when '2' or '22' %}{{ d }}nd
+  {% when '3' or '23' %}{{ d }}rd
+  {% else %}{{ d }}th
+  {% endcase %} 
+  {{ item.date | date: "%B %Y" }}.
+{% when 'press' %}
+"{{ item.title}}". {{ item.publisher }}.
+  {% assign d = item.date | date: "%-d"  %}
+  {% case d %}
+  {% when '1' or '21' or '31' %}{{ d }}st
+  {% when '2' or '22' %}{{ d }}nd
+  {% when '3' or '23' %}{{ d }}rd
+  {% else %}{{ d }}th
+  {% endcase %} 
+  {{ item.date | date: "%B %Y" }}.
+{% when 'media' %}
+{{ item.programme}}, {{ item.channel}}.
+  {% assign d = item.date | date: "%-d"  %}
+  {% case d %}
+  {% when '1' or '21' or '31' %}{{ d }}st
+  {% when '2' or '22' %}{{ d }}nd
+  {% when '3' or '23' %}{{ d }}rd
+  {% else %}{{ d }}th
+  {% endcase %} 
+  {{ item.date | date: "%B %Y" }}.
+{% endcase %}
+</p>
+{% if item.link %}<a href="{{ item.link }}" class="cd-read-more">Link</a>{% endif %}
+{% if item.slides %}<a href="{{ item.slides }}" class="cd-read-more">Slides</a>{% endif %}
+{% if item.video %}<a href="{{ item.video }}" class="cd-read-more">Video</a>{% endif %}
+<span class="cd-date">{{ item.date | date: "%B %Y"}}</span>
+</div>
+</div>
+{% endfor %}
+</section>
+Icons designed by <a href="https://www.flaticon.com/authors/vectors-market">Vectors Market</a> from Flaticon.
+</body>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="{{ "/assets/js/index.js" | relative_url }}"></script>
+</body>
+</html>
