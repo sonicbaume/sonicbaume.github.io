@@ -2,3 +2,5 @@ markdown: kramdown
 collections:
   items:
     output: false
+  types:
+    output: false

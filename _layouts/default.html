@@ -14,41 +14,20 @@
 <header>
 <h1>{{ page.title }}</h1>
 </header>
-<section>
-  <div class="cd-timeline-img cd-picture">
-    <img src="{{ "/assets/svg/open-book-1.svg" | relative_url }}" alt="Journal papers" width="60" height="60">
+<section id="cd-menu" class="cd-menu">
+{% assign types = site.types | sort:"order" %}
+{% for type in types %}
+<div class="menu-item {{ type.type }}">
+    <img src="/assets/svg/{{ type.type }}.svg">
+    <span class="menu-item-label">{{ type.menuLabel }}</span>
   </div>
+{% endfor %}
 </section>
 <section id="cd-timeline" class="cd-container">
 {% assign items = site.items | sort: 'date' %}
 {% for item in items reversed %}
-<div class="cd-timeline-block">
-<div class="cd-timeline-img cd-picture">
-<img src="
-{% case item.type %}
-{% when 'journal' %}
-{{ "/assets/svg/open-book-1.svg" | relative_url }}
-{% when 'conference' %}
-{{ "/assets/svg/open-book.svg" | relative_url }}
-{% when 'white' %}
-{{ "/assets/svg/notes.svg" | relative_url }}
-{% when 'presentation' %}
-{{ "/assets/svg/lecture-2.svg" | relative_url }}
-{% when 'press' %}
-{{ "/assets/svg/news.svg" | relative_url }}
-{% when 'media' %}
-{{ "/assets/svg/radio-1.svg" | relative_url }}
-{% when 'education' %}
-{{ "/assets/svg/mortarboard.svg" | relative_url }}
-{% when 'job' %}
-{{ "/assets/svg/suitcase.svg" | relative_url }}
-{% when 'volunteer' %}
-{{ "/assets/svg/teamwork-1.svg" | relative_url }}
-{% when 'award' %}
-{{ "/assets/svg/cup.svg" | relative_url }}
-{% endcase %}
-" alt="{{ item.type }}">
-</div>
+<div class="cd-timeline-block {{ item.type }}">
+<div class="cd-timeline-img cd-picture"><img src="/assets/svg/{{ item.type }}.svg" alt="{{ item.type }}"></div>
 <div class="cd-timeline-content">
 <h2>{% case item.type %}
 {% when 'journal' %}
