@@ -106,7 +106,7 @@ header h1 {
 
 #cd-timeline {
   position: relative;
-  padding: 2em 0;
+  /*padding: 2em 0;*/
   margin-top: 3em;
   margin-bottom: 3em;
 }
@@ -140,12 +140,12 @@ header h1 {
   content: "";
   display: table;
 }
-.cd-timeline-block:first-child {
-  margin-top: 0;
-}
-.cd-timeline-block:last-child {
-  margin-bottom: 0;
-}
+/*.cd-timeline-block:first-child {*/
+  /*margin-top: 0;*/
+/*}*/
+/*.cd-timeline-block:last-child {*/
+  /*margin-bottom: 0;*/
+/*}*/
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block {
     margin: 4em 0;
@@ -153,15 +153,20 @@ header h1 {
 }
 
 .menu-item {
-  width: 60px;
+  /*width: 60px;*/
   height: 60px;
   margin: 4px 4px;
   display: inline-block;
+  border-radius: 30px;
+  box-shadow: 0 0 0 4px #ffffff, /*inset 0 2px 0 rgba(0, 0, 0, 0.08),*/ 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  cursor: pointer;
 }
 
 .menu-item img {
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
 }
 
 .menu-item.disabled img {
@@ -170,13 +175,12 @@ header h1 {
 }
 
 .menu-item:hover .menu-item-label {
-    visibility: visible;
+  visibility: visible;
 }
 
 .menu-item:hover img {
   -webkit-filter: none;
   filter: none;
-  cursor: pointer;
 }
 
 .menu-item-label {
@@ -184,13 +188,12 @@ header h1 {
   background-color: white;
   color: black;
   text-align: center;
-  padding: .5em;
+  padding: 10px;
   position: absolute;
   z-index: 1;
   width: 120px;
   margin-left: -60px;
   margin-top: 5px;
-  /*margin-top: 39px;*/
 }
 .menu-item-label::after {
   content: "";
@@ -203,7 +206,20 @@ header h1 {
   border-color: transparent transparent white transparent;
 }
 
-/*@media only screen and (min-width: 1170px) {*/
+@media (hover: none) {
+  .menu-item-label {
+    line-height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    visibility: visible;
+    position: static;
+    margin: 0;
+    width: auto;
+    background-color: transparent;
+  }
+  .menu-item-label::after {
+    display: none;
+  }
   /*.menu-item {*/
     /*width: 60px;*/
     /*[>height: 60px;<]*/
@@ -231,7 +247,7 @@ header h1 {
     /*-moz-animation: cd-bounce-1 0.6s;*/
     /*animation: cd-bounce-1 0.6s;*/
   /*}*/
-/*}*/
+}
 
 
 .cd-timeline-img {
