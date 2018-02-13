@@ -18,7 +18,8 @@
 {% assign types = site.types | sort:"order" %}
 {% for type in types %}
 <div class="menu-item {{ type.type }}">
-    <img src="/assets/svg/{{ type.type }}.svg">
+{% capture iconUrl %}/assets/svg/{{ type.type }}.svg{% endcapture %}
+    <img src="{{ iconUrl | relative_url }}">
     <span class="menu-item-label">{{ type.menuLabel }}</span>
   </div>
 {% endfor %}
@@ -26,8 +27,9 @@
 <section id="cd-timeline" class="cd-container">
 {% assign items = site.items | sort: 'date' %}
 {% for item in items reversed %}
+{% capture iconUrl %}/assets/svg/{{ item.type }}.svg{% endcapture %}
 <div class="cd-timeline-block {{ item.type }}">
-<div class="cd-timeline-img cd-picture"><img src="/assets/svg/{{ item.type }}.svg" alt="{{ item.type }}"></div>
+<div class="cd-timeline-img cd-picture"><img src="{{ iconUrl | relative_url }}" alt="{{ item.type }}"></div>
 <div class="cd-timeline-content">
 <h2>{% case item.type %}
 {% when 'journal' %}
