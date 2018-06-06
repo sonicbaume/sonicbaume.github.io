@@ -56,7 +56,7 @@ Presentation
 <p>
 {% case item.type %}
 {% when 'journal' %}
-{{ item.authors }}. "{{ item.title }}". In <i>{{ item.journal }}</i>. {% if item.inpress %}(in press){% endif %}
+{{ item.authors }}. "{{ item.title }}". In <i>{{ item.journal }}</i>{% if item.volume %} {{ item.volume }}{% endif %}{% if item.number %}:{{ item.number }}{% endif %}. {% if item.inpress %}(in press){% endif %}
 {% when 'conference' %}
 {{ item.authors }}. "{{ item.title }}". In <i>Proceedings of {{ item.conference }}</i>.
 {% when 'white' %}
@@ -80,6 +80,7 @@ else %}present{% endif %}.<br />{{ item.content }}
   {% else %}{{ d }}th
   {% endcase %} 
   {{ item.date | date: "%B %Y" }}.
+  <img src="https://cdn.rawgit.com/hjnilsson/country-flags/master/svg/{{ item.country }}.svg" width="20">
 {% when 'press' %}
 "{{ item.title}}". {{ item.publisher }}.
   {% assign d = item.date | date: "%-d"  %}

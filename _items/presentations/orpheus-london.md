@@ -1,7 +1,7 @@
 ---
 type: 'presentation'
-event: 'Semantic Media Network workshop'
+event: 'ORPHEUS Workshop on Object-based Audio'
 location: 'London, UK'
 country: 'gb'
-date: 2013-02-06
+date: 2017-06-13
 ---
