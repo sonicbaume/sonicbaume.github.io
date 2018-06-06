@@ -56,7 +56,8 @@ Presentation
 <p>
 {% case item.type %}
 {% when 'journal' %}
-{{ item.authors }}. "{{ item.title }}". In <i>{{ item.journal }}</i>{% if item.volume %} {{ item.volume }}{% endif %}{% if item.number %}:{{ item.number }}{% endif %}. {% if item.inpress %}(in press){% endif %}
+{{ item.authors }}. "{{ item.title }}". In <i>{{ item.journal }}</i>{% if item.volume %} {{ item.volume }}{% endif %}{%
+if item.number %}:{{ item.number }}{% endif %}. {% if item.inpress %}(in press){% endif %}
 {% when 'conference' %}
 {{ item.authors }}. "{{ item.title }}". In <i>Proceedings of {{ item.conference }}</i>.
 {% when 'white' %}
@@ -106,6 +107,7 @@ else %}present{% endif %}.<br />{{ item.content }}
 {% if item.link %}<a href="{{ item.link }}" class="cd-read-more">Link</a>{% endif %}
 {% if item.slides %}<a href="{{ item.slides }}" class="cd-read-more">Slides</a>{% endif %}
 {% if item.video %}<a href="{{ item.video }}" class="cd-read-more">Video</a>{% endif %}
+{% if item.licence=='cc-by'%}<img src="https://licensebuttons.net/l/by/4.0/88x31.png">{% endif %}
 <span class="cd-date">{{ item.date | date: "%B %Y"}}</span>
 </div>
 </div>
