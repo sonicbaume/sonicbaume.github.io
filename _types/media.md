@@ -1,6 +1,6 @@
 ---
 type: 'media'
-menuLabel: 'Media appearances'
-itemLabel: 'Media appearance'
+menuLabel: 'Media'
+itemLabel: 'Media'
 order: 8
 ---

@@ -4,3 +4,5 @@ collections:
     output: false
   types:
     output: false
+  links:
+    output: false

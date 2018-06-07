@@ -19,6 +19,7 @@ body {
   font-family: "Droid Serif", serif;
   color: #7f8c97;
   background-color: #e9f0f5;
+  /*background-image: linear-gradient(to bottom, #e9f0f5, #e9f0f5 50%, #303e49);*/
 }
 
 a {
@@ -35,6 +36,7 @@ h1, h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
+
 
 /* -------------------------------- 
 
@@ -75,16 +77,41 @@ Main components
 
 -------------------------------- */
 header {
-  height: 300px;
-  line-height: 300px;
-  text-align: center;
+  /*height: 400px;*/
+  text-align: left;
   background: #303e49;
+  min-height: 400px;
+  max-width: 1170px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  padding: 30px;
 }
 header h1 {
+  margin-top: 2rem;
   color: #ffffff;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
+header h2 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+header p {
+  margin-top: 20px;
+  line-height: 1.5rem;
+}
+header>img {
+  padding-left: 30px;
+}
+header>p img {
+  margin-top:1rem;
+  margin-right:1rem;
+}
+@media only screen and (min-width: 600px) {
+header>img {
+  float: right;
+}
+}
+
 /*@media only screen and (min-width: 1170px) {*/
   /*header {*/
     /*height: 300px;*/
@@ -146,11 +173,11 @@ header h1 {
 /*.cd-timeline-block:last-child {*/
   /*margin-bottom: 0;*/
 /*}*/
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-block {
-    margin: 4em 0;
-  }
-}
+/*@media only screen and (min-width: 1170px) {*/
+  /*.cd-timeline-block {*/
+    /*margin: 4em 0;*/
+  /*}*/
+/*}*/
 
 .menu-item {
   /*width: 60px;*/
@@ -371,8 +398,7 @@ header h1 {
   margin: 0.5em 0;
 }
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-  /*font-size: 13px;*/
-  /*font-size: 0.8125rem;*/
+  font-size: 0.8125rem;
 }
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
@@ -380,6 +406,12 @@ header h1 {
 .cd-timeline-content p {
   margin: 1em 0;
   line-height: 1.2;
+}
+.cd-timeline-content img {
+  max-width: 100%;
+}
+.cd-timeline-content img.doi {
+  width: 31px;
 }
 .cd-timeline-content .cd-read-more {
   float: right;
