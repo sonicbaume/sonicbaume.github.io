@@ -1,7 +1,7 @@
 ---
 type: 'presentation'
 event: 'EBU Production Technology Seminar'
-location: 'Geneva, Switzerland'
+location: 'Geneva'
 country: 'ch'
 date: 2016-01-27
 link: https://tech.ebu.ch/pts2016
