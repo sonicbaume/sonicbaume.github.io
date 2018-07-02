@@ -16,7 +16,8 @@ html * {
 
 body {
   font-size: 100%;
-  font-family: "Droid Serif", serif;
+  font-family: "Open Sans", sans-serif;
+  /*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
   color: #7f8c97;
   background-color: #e9f0f5;
   /*background-image: linear-gradient(to bottom, #e9f0f5, #e9f0f5 50%, #303e49);*/
@@ -25,16 +26,25 @@ body {
 a {
   color: #acb7c0;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
 }
 
-img {
-  /*max-width: 100%;*/
+h1, h2, h3, h4 {
+  font-family: "Archivo", sans-serif;
 }
-
-h1, h2 {
-  font-family: "Open Sans", sans-serif;
+h1, h2, h3 {
   font-weight: bold;
+}
+h4 {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+footer {
+  margin: 0 auto;
+  text-size: 0.8rem;
+  max-width: 1170px;
+  text-align: center;
+  margin-bottom: 3em;
 }
 
 
@@ -81,9 +91,11 @@ header {
   text-align: left;
   background: #303e49;
   min-height: 400px;
+  font-size: 1.2rem;
+}
+header div.wrapper {
   max-width: 1170px;
   margin: 0 auto;
-  font-size: 1.2rem;
   padding: 30px;
 }
 header h1 {
@@ -95,19 +107,25 @@ header h2 {
   margin-top: 0.5rem;
   font-size: 1rem;
 }
+header h3 {
+  font-weight: normal;
+  margin-top: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
 header p {
   margin-top: 20px;
   line-height: 1.5rem;
 }
-header>img {
+header div.wrapper>img {
   padding-left: 30px;
 }
-header>p img {
+header div.wrapper>p img {
   margin-top:1rem;
   margin-right:1rem;
 }
 @media only screen and (min-width: 600px) {
-header>img {
+header div.wrapper>img {
   float: right;
 }
 }
@@ -384,8 +402,8 @@ header>img {
   position: relative;
   margin-left: 80px;
   background: #ffffff;
-  border-radius: 0.25em;
-  padding: 1em;
+  border-radius: 0.5em;
+  padding: 1.5em;
   box-shadow: 0 3px 0 #d7e4ed;
 }
 .cd-timeline-content::after {
@@ -394,18 +412,29 @@ header>img {
   display: table;
 }
 .cd-timeline-content h2 {
+  font-size: 1.1rem;
   color: #303e49;
-  margin: 0.5em 0;
+  margin-bottom: 0.5em;
 }
-.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+.cd-timeline-content h3 {
+  font-size: 1rem;
+}
+.cd-timeline-content h4 {
+  line-height: 1.1rem;
+}
+.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content {
   font-size: 0.8125rem;
+}
+.cd-date {
+  font-size: 1rem;
 }
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
 }
 .cd-timeline-content p {
-  margin: 1em 0;
+  margin-top: 0.5rem;
   line-height: 1.2;
+  text-align: justify;
 }
 .cd-timeline-content img {
   max-width: 100%;
@@ -455,7 +484,7 @@ header>img {
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
     margin-left: 0;
-    padding: 1em;
+    padding: 1.5em;
     width: 45%;
   }
   .cd-timeline-content::before {

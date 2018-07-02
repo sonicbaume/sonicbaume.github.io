@@ -4,7 +4,7 @@ award: 'Doctor of Philosophy'
 degree: '"Semantic Audio Tools for Radio Production"'
 institution: 'University of Surrey'
 startdate: 2013-09-01
-date: 2018-04-01
+date: 2018-04-30
 link: 'https://chrisbaume.github.io/thesis/'
 licence: 'cc-by'
 ---
