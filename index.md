@@ -4,7 +4,8 @@ title: "Chris Baume"
 subtitle: "MEng CEng PhD"
 photo: 'assets/mugshot.jpg'
 ---
-Chris is a Senior Research Engineer at BBC R&D in London, where he leads the BBC's research into audio production
-tools and the BBC's role in the Orpheus EU H2020 project. His research interests include semantic audio analysis,
-interaction design, object-based audio and spatial audio. Chris is a Chartered Engineer and completed his PhD at the
-Centre for Vision, Speech and Signal Processing at the University of Surrey.
+Leading expert in audio technology research, specialising in production of immersive and interactive content using
+object-based media and semantic audio analysis. Experienced in managing international technical projects, research
+portfolios and large events. Currently leading the BBC's research into audio production tools, having recently
+delivered the production workstream of the €4M European research project ORPHEUS. Fluent in Python, Javascript and C++
+with experience in machine learning and user-centered design.
