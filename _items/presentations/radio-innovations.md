@@ -4,6 +4,7 @@ title: 'Creating New Audio Experiences with Object-Based Broadcasting'
 event: 'Keynote: Radio Innovations Conference'
 location: 'Cologne'
 country: 'de'
+slides: 'assets/slides/20161006 Radio Innovations.pdf'
 date: 2016-10-06
 ---
 Object-based audio is a revolutionary new way of broadcasting that unlocks a range of new audience experiences. In his
