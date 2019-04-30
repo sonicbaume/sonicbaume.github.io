@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -16,7 +16,7 @@ html * {
 
 body {
   font-size: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Cabin", sans-serif;
   /*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
   color: #7f8c97;
   background-color: #e9f0f5;
@@ -28,8 +28,12 @@ a {
   text-decoration: none;
 }
 
+a.licence {
+    float: right;
+}
+
 h1, h2, h3, h4 {
-  font-family: "Archivo", sans-serif;
+  font-family: "Cabin", sans-serif;
 }
 h1, h2, h3 {
   font-weight: bold;
@@ -59,7 +63,7 @@ footer {
   opacity: 1;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Modules - reusable parts of our design
 
@@ -92,9 +96,18 @@ Modules - reusable parts of our design
   clear: both;
 }
 
-/* -------------------------------- 
+.media-image img {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
 
-Main components 
+.cd-timeline-block.right .cd-timeline-content {
+  float: right;
+}
+
+/* --------------------------------
+
+Main components
 
 -------------------------------- */
 header {
@@ -448,8 +461,11 @@ header div.wrapper>img {
 .cd-timeline-content h4 {
   line-height: 1.1rem;
 }
-.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content {
+.cd-timeline-content p, .cd-timeline-content {
   font-size: 0.8125rem;
+}
+.cd-timeline-content .cd-read-more {
+  font-size: 1.2em;
 }
 .cd-date {
   font-size: 1rem;
@@ -470,13 +486,14 @@ header div.wrapper>img {
 }
 .cd-timeline-content .cd-read-more {
   float: right;
-  padding: .8em 1em;
+  color: #7f8c97;
+  /* padding: .8em 1em;
   background: #acb7c0;
   color: #ffffff;
-  border-radius: 0.25em;
+  border-radius: 0.25em; */
 }
 .no-touch .cd-timeline-content .cd-read-more:hover {
-  background-color: #bac4cb;
+  /* background-color: #bac4cb; */
 }
 .cd-timeline-content .cd-date {
   float: left;
@@ -519,9 +536,9 @@ header div.wrapper>img {
     border-color: transparent;
     border-left-color: #ffffff;
   }
-  .cd-timeline-content .cd-read-more {
+  /* .cd-timeline-content .cd-read-more {
     float: left;
-  }
+  } */
   .cd-timeline-content .cd-date {
     position: absolute;
     width: 100%;
@@ -530,20 +547,17 @@ header div.wrapper>img {
     /*font-size: 16px;*/
     /*font-size: 1rem;*/
   }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content {
-    float: right;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+  .cd-timeline-block.right .cd-timeline-content::before {
     top: 24px;
     left: auto;
     right: 100%;
     border-color: transparent;
     border-right-color: #ffffff;
   }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
-    float: right;
+  .cd-timeline-block .cd-timeline-content .cd-read-more {
+    /* float: right; */
   }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+  .cd-timeline-block.right .cd-timeline-content .cd-date {
     left: auto;
     right: 122%;
     text-align: right;

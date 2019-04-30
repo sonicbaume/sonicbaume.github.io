@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
   var selected = [];
-	var $timeline_block = $('.cd-timeline-block');
+  var $timeline_block = $('.cd-timeline-block');
   var $menu_items = $('.menu-item');
 
   // select or unselect menu items
@@ -9,11 +9,14 @@ jQuery(document).ready(function($){
 
   // show or hide timeline items
   var updateTimeline = function(type) {
+    var count = 0;
     $timeline_block.each(function(){
-      if (selected.length == 0) return $(this).show();
       var type = $(this).attr('class').split(/\s+/)[1];
-      if ($.inArray(type,selected) > -1) {
+      if ($.inArray(type,selected) > -1 || selected.length==0) {
         $(this).show();
+        if (count%2==0) $(this).addClass('right');
+        else $(this).removeClass('right');
+        count = count + 1;
       } else {
         $(this).hide();
       }
@@ -93,4 +96,6 @@ jQuery(document).ready(function($){
       updateTimeline();
     });
   });
+
+  updateTimeline();
 });
