@@ -101,9 +101,7 @@ Modules - reusable parts of our design
     padding-bottom: 0.5em;
 }
 
-.cd-timeline-block.right .cd-timeline-content {
-  float: right;
-}
+
 
 /* --------------------------------
 
@@ -497,7 +495,7 @@ header div.wrapper>img {
 }
 .cd-timeline-content .cd-date {
   float: left;
-  padding: .8em 0;
+  margin-top: 0.5rem;
   opacity: .7;
 }
 .cd-timeline-content::before {
@@ -530,6 +528,9 @@ header div.wrapper>img {
     padding: 1.5em;
     width: 45%;
   }
+  .cd-timeline-block.right .cd-timeline-content {
+    float: right;
+  }
   .cd-timeline-content::before {
     top: 24px;
     left: 100%;
@@ -544,6 +545,8 @@ header div.wrapper>img {
     width: 100%;
     left: 122%;
     top: 6px;
+    margin-top: 0;
+    padding: .8em 0;
     /*font-size: 16px;*/
     /*font-size: 1rem;*/
   }
