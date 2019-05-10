@@ -50,6 +50,7 @@ document.write("<n uers=\"{{ link.link }}\">".replace(/[a-zA-Z]/g, function(c){r
 <div class="cd-timeline-content">
 {% if item.licence=='cc-by'%}<a class="licence" href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by/4.0/88x31.png"></a>{% endif %}
 {% if item.licence=='cc-by-nc-nd'%}<a class="licence" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"></a>{% endif %}
+{% if item.licence=='cc-by-nc-sa'%}<a class="licence" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"></a>{% endif %}
 <h2>{% case item.type %}
 {% when 'journal' %}
 {{ item.journal }} {% if item.volume %} {{ item.volume }}{% endif %}{% if item.number %}:{{ item.number }}{% endif %}.
