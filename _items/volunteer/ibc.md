@@ -1,6 +1,6 @@
 ---
 type: 'volunteer'
-title: 'Technical Innovation Group'
+title: 'Content Steering Group'
 organisation: 'International Broadcasting Convention'
 date: 2020-01-30
 ---
