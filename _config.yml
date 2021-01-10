@@ -6,3 +6,5 @@ collections:
     output: false
   links:
     output: false
+
+theme: jekyll-theme-cayman
