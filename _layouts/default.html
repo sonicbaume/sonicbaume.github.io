@@ -53,7 +53,7 @@ document.write("<n uers=\"znvygb:puevf@onh.zr\">".replace(/[a-zA-Z]/g, function(
 {% if item.licence=='cc-by-nc-sa'%}<a class="licence" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"></a>{% endif %}
 <h2>{% case item.type %}
 {% when 'journal' %}
-{{ item.journal }} {% if item.volume %} {{ item.volume }}{% endif %}{% if item.number %}:{{ item.number }}{% endif %}.
+{{ item.journal }} {% if item.volume %} {{ item.volume }}{% endif %}{% if item.number %}:{{ item.number }}{% endif %}
 {% when 'conference' %}
 {{ item.conference }}
 {% when 'white' %}
